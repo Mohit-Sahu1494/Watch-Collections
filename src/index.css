@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #EEEDEA;        /* poore page ka background */
+  --surface: #F8F7F4;   /* popup / cards ka background */
+  --ink: #16120F;       /* main text (headings, paragraphs) */
+  --muted: #6A645D;     /* halka text (descriptions, menu links) */
+  --line: #D4D1CB;      /* borders aur dividers */
+  --gold: #8A6A2F;      /* main accent: buttons, price, quote line */
+  --on-gold: #FFFFFF;   /* gold button ke andar ka text */
+
+  /* Dark sections (hero, cabinet, booking) ke liye */
+  --cab: #17110D;       /* dark brown background */
+  --cab2: #221A14;      /* cabinet ke gradient ka upar ka hissa */
+  --cab-ink: #F2EDE5;   /* dark sections ke andar ka text */
+  --gl: #CDAE68;        /* dark sections me halka gold */
+}
+
+body{font:300 17px/1.7 Jost,system-ui,sans-serif}
+/* logo */
+.logo{
+  font-family:Italiana,Georgia,serif;
+  font-size:30px;
+  letter-spacing:.3em
+}
+
+/* menu links */
+.links{
+  font-size:15px;
+  color:var(--muted)
+
+}   /* font Jost body se aata hai */
+.links:hover{
+  color: black;
+}
+
+/* button */
+.sm{
+  font-size:14px
+}                     /* weight 500 .btn se aata hai */
+/* headings ka font */
+.font-display { font-family: Italiana, Georgia, serif; }
+
+/* watch par ek baar chamak ka effect */
+.glint {
+  background: linear-gradient(105deg, transparent 42%, rgba(255,255,255,.18) 50%, transparent 58%);
+  transform: translateX(-130%);
+  animation: glint 2.6s .7s 1 forwards;
+}
+@keyframes glint { to { transform: translateX(130%); } }
+@media (prefers-reduced-motion: reduce) { .glint { display: none; } }
+@keyframes clock-tick {
+  from {
+    transform: rotate(150deg);
+  }
+  to {
+    transform: rotate(510deg);
+  }
+}
